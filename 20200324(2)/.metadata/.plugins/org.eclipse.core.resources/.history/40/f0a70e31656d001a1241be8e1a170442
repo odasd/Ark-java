@@ -1,0 +1,21 @@
+package ex01;
+
+public class Sample {
+
+	public static void main(String[] args) {
+		int score=;
+		if(score>=90) {
+			System.out.println(score+"은(는)90점보다 큽니다.\n");
+			System.out.println("등급은 A등급입니다.");
+		} else if(score>=80) {// \n은 ln과 같이 다음줄에 출력한다는 뜻
+			System.out.println(score+"은(는) 80점보다 작습니다.\n");
+			System.out.println("등급은 B입니다.");
+		} else if(score>=70) {
+			System.out.println(score+"은(는) 70점보다 작습니다.\n");
+			System.out.println("등급은 C입니다.");
+		} else if(score>=60) {
+				System.out.println(score+"은(는) 60점보다 작습니다.\n");
+				System.out.println("등급은 F입니다.");
+	}
+
+}

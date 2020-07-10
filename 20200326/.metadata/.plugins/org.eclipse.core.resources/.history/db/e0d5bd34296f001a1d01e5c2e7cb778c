@@ -1,0 +1,72 @@
+package ex04;
+
+import java.util.Scanner;
+
+public class Sample {
+
+	public static void main(String[] args) {
+		Scanner s= new Scanner(System.in);
+		
+		boolean run=true;
+		
+		String[] account=new String[100]; // °èÁÂ¹øÈ£
+		String[] name=new String[100];	// °èÁÂÁÖ
+		int[] money=new int[100];	// ÀÜ¾×
+		int count=0;
+		
+		
+		
+		
+		while(run) {
+			
+		System.out.println("------------------------------------------------");
+		System.out.println(" 1. °èÁÂ»ý¼º | 2. °èÁÂ¸ñ·Ï | 3. ¿¹±Ý | 4. Ãâ±Ý | 5. Á¾·á ");
+		System.out.println("------------------------------------------------");
+		System.out.print("¼±ÅÃ> ");
+
+		int menu=s.nextInt();
+		
+		switch(menu) {
+		
+			case 1: //°èÁÂ »ý¼º
+				System.out.println("---------------------------------------------");
+				System.out.println("°èÁÂ»ý¼º");
+				System.out.println("---------------------------------------------");
+				System.out.print("°èÁÂ¹øÈ£> ");
+				account[count]=s.next();
+				System.out.print("°èÁÂÁÖ> ");
+				name[count]=s.next();
+				System.out.print("ÃÊ±â ÀÔ±Ý¾×> ");
+				s.nextLine();
+				money[count]=s.nextInt();
+				count=count+1;
+				System.out.print("°á°ú : °èÁÂ°¡ »ý¼ºµÇ¾ú½À´Ï´Ù.");
+				break;
+			case 2: // °èÁÂ¸ñ·Ï
+				System.out.println("-------------------------------------------");
+				System.out.println("°èÁÂ¸ñ·Ï");
+				System.out.println("-------------------------------------------");
+				for(int i=0; i<count; i++ ) {
+					System.out.println("°èÁÂ¸ñ·Ï\t" + account[i] +"\t"+ name[i]+ "\t"+money[i]);
+				}
+				break;
+			case 3: // ¿¹±Ý
+				
+				}
+				break;
+			case 4: // Ãâ±Ý
+				
+				break;
+			case 5: // Á¾·á
+				run=false;
+				System.out.println("ÇÁ·Î±×·¥ Á¾·á");
+				break;
+			default :
+				System.out.println("Àß¸øµÈ ¸Þ´ºÀÔ´Ï´Ù.");
+				
+		}
+		
+		}
+	}
+
+}

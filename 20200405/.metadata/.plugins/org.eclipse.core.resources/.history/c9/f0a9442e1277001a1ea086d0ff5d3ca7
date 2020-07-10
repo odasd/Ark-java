@@ -1,0 +1,119 @@
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.util.Scanner;
+
+public class Sample {
+
+	public static void main(String[] args) throws Exception {
+		
+		String driver = "oracle.jdbc.driver.OracleDriver";
+		String url = "jdbc:oracle:thin:@localhost:1521:orcl";
+		String user = "system";
+		String password = "159752s";
+
+		Class.forName(driver);
+		Connection con=DriverManager.getConnection(url, user, password);
+		
+		String sql="select*from tbl_grade order by kor+eng+mat desc";//order by ~ desc 큰값에서 작은값순으로 출력함(내림차순)
+		PreparedStatement ps=con.prepareStatement(sql);				//order by ~ asc 작은값에서 큰값으로 출력함(오름차순)
+		ResultSet rs=ps.executeQuery();
+		
+		Scanner s=new Scanner(System.in);
+		
+		boolean run=true;
+		
+		while(run) {
+			
+			System.out.println("------------------------------------------");
+			System.out.println(" 1. 성적입력 | 2. 성적목록 | 3. 성적조회 | 4. 종료");
+			System.out.println("------------------------------------------");
+			System.out.print("메뉴선택 > ");
+			int menu=s.nextInt();
+			
+			switch(menu) {
+				
+				case 1:
+					sql="insert into report (sno,sname,kor,eng,mat) values (?, ?, ?, ?, ?)";
+					ps=con.prepareStatement(sql);
+					
+					System.out.print("번호 : ");
+					String sno=s.next();
+					System.out.print("이름 : ");
+					String sname=s.next();
+					System.out.print("국어 : ");
+					int kor=s.nextInt();
+					System.out.print("영어 : ");
+					int eng=s.nextInt();
+					System.out.print("수학 : ");
+					int mat=s.nextInt();
+					
+					ps.setString(1, sno);
+					ps.setString(2, sname);
+					ps.setInt(3, kor);
+					ps.setInt(4, eng);
+					ps.setInt(5, mat);
+					ps.execute();
+					break;
+					
+				case 2:
+					sql="select*from report";
+					ps=con.prepareStatement(sql);
+					rs=ps.executeQuery();
+					
+					System.out.println("번호\t이름\t국어\t영어\t수학");
+					while(rs.next()) {
+						
+					sno=rs.getString("sno");
+					sname=rs.getString("sname");
+					kor=rs.getInt("kor");
+					eng=rs.getInt("eng");
+					mat=rs.getInt("mat");
+					System.out.println(sno+"\t"+sname+"\t"+kor+"\t"+eng+"\t"+mat);
+					
+					}
+					break;
+					
+				case 3:
+					
+					System.out.print("번호 선택> ");
+					sno=s.next();
+					
+					sql="select*from report where sno=?";
+					ps=con.prepareStatement(sql);
+					ps.setString(1, sno);
+					rs=ps.executeQuery();
+					
+					
+					
+					while(rs.next()) {
+					sno=rs.getString("sno");
+					sname=rs.getString("sname");
+					kor=rs.getInt("kor");
+					eng=rs.getInt("eng");
+					mat=rs.getInt("mat");
+					
+					System.out.println(sno+"\t"+sname+"\t"+kor+"\t"+eng+"\t"+mat);
+					
+					}
+					
+					break;
+				case 4:
+					run=false;
+					System.out.println("장비를 정지합니다 앙대..");
+					break;
+				default :
+					System.out.println("잘못골랐덩");
+			
+			}
+		}
+
+	}
+
+	private static PreparedStatement (String sql) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

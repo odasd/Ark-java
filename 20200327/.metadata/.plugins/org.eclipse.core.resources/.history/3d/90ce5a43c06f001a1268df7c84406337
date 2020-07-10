@@ -1,0 +1,75 @@
+package ex01;
+
+public class Sample {
+
+	public static void main(String[] args) {
+		//변수타입
+		int intNum1=10, intNum2=20;
+		double dbNum1=10.3, dbNum2=20.4;
+		char chr1='a', chr2='b';
+		
+		String  str1="홍길동" , str2="홍길동"; // 참조변수 스택의 str1과 str2는 힙에 저장된 값이 같아서 같다고 함
+		String str3=new String("홍길동");		// 저장된 데이터를 비교하는게 아니라 저장된 주소를 비교함
+		String[] strArray= {"홍길동", "임올"};				//위 3개는 참조타입
+		
+		if(strArray[0].equals(str1)) {  //변수안의 내용비교는 .equals()의 형식
+			System.out.println("같다.");
+		} else {
+			System.out.println("같지않다");
+		}
+		
+		
+		
+		if(str1==str2) {
+			System.out.println("같다.");
+		} else {
+			System.out.println("같지않다.");
+		}
+		
+		if(str1.equals(str3)) {				//문자열(String) 비교는 equals가 좋음
+			System.out.println("같다.");
+		} else {
+			System.out.println("같지않다.");
+		}
+		
+		System.out.println("intNum1 "+intNum1);
+		
+		//연산자
+		//1. 산술연산자(+,-,*,/)
+		int intResult1=intNum1+intNum2;
+		System.out.println("intNum1+intNum2= " + intResult1);
+		double dbResult2=(int)dbNum1+(int)dbNum2;
+		System.out.println("db1Num+dbNum2="+dbResult2);
+		
+		//2. 비교연산자(==, !=, >=, >, <)
+		if(intNum1==intNum2) {
+			System.out.println("두수가 같습니다.");
+		} else {
+			System.out.println("두수가 같지 않습니다.");
+		}
+		if(intNum1!=intNum2) {
+			System.out.println("두수가 같습니다.");
+		} else {
+			System.out.println("두수가 같지 않습니다.");
+		}
+		
+		if(intNum1>=intNum2) {
+			System.out.println("두수가 같습니다.");
+		} else {
+			System.out.println("두수가 같지 않습니다.");
+		}
+		
+		if(intNum1<=intNum2) {
+			System.out.println("두수가 같습니다.");
+		} else {
+			System.out.println("두수가 같지 않습니다.");
+		}
+		
+		
+		//3. 논리연산자(!(not), &&(and), ||(or))
+		boolean isRun=false;
+		isRun=(intNum1>=10) && (intNum2>=20);
+		System.out.println(isRun);
+	}
+
+}

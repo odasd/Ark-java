@@ -1,0 +1,15 @@
+package ex01;
+
+public class Sample {
+
+	public static void main(String[] args) { //void는 리턴 타입 리턴할게없다.
+		Phone p1=new Phone();
+		p1.poweron();
+		p1.bell();
+		p1.reciveVoice("여보세요?");
+		p1.sendVoice("저는 홍길동입니다.");
+		p1.hangup();
+		p1.poweroff();
+	}
+
+}

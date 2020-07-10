@@ -1,0 +1,23 @@
+package ex02;
+
+//³ĞÀÌ
+public class Area {
+	//»ï°¢Çü ³ĞÀÌ
+	static double triangle(int x, int y) {
+		System.out.println("»ï°¢Çü ³ĞÀÌ");
+		return (double)x * y / 2;
+	}
+	
+	
+	//Á÷»ç°¢Çü ³ĞÀÌ
+	static int rectangle(int x, int y) {
+		System.out.println("Á÷»ç°¢Çü ³ĞÀÌ");
+		return x * y;
+	}
+	
+	//Á¤»ç°¢Çü ³ĞÀÌ
+	static int rectangle(int x) {
+		System.out.println("Á¤»ç°¢Çü ³ĞÀÌ");
+		return x * x;
+	}
+}

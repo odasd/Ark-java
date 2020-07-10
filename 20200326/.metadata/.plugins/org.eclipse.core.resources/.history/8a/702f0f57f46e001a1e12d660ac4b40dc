@@ -1,0 +1,17 @@
+package ex01;
+
+public class Sample {
+
+	public static void main(String[] args) {
+		//배열에 있는 테이다틀에 대한 평균값과 최대값
+		int[] num = {12, 15, 85, 98, 58, 65, 45, 90};
+				  //0번방,1번방,...
+		int sum=0;
+		for(int i=0; i<num.length; i++) {
+			sum=sum+num[i];
+			
+		}  System.out.println("전체 합계" + sum);
+		System.out.println("평균 : " + sum/num.length);
+	}      
+
+}

@@ -1,0 +1,35 @@
+package pt01;
+
+import java.util.Scanner;
+
+public class Sample {
+	
+	public static void method1() {
+		//이름, 국어, 영어, 수학 키보드에서 입력
+				//총점, 평균출력 -> 변수명부터 입력
+				Scanner s=new Scanner(System.in);
+				System.out.println("이름 ");
+				String name=s.next();
+				
+				System.out.println("국어");
+				int kor=s.nextInt();
+				
+				System.out.println("영어 ");
+				int eng=s.nextInt();
+				
+				System.out.println("수학 ");
+				int mat=s.nextInt();
+				
+				int tot=kor+eng+mat;
+				System.out.println("총점\n" + tot);
+				
+				double avg=tot/3.;
+				System.out.println("평균점수 " + avg);
+	}
+	
+	public static void main(String[] args) {
+		method1();
+
+	}
+
+}

@@ -1,0 +1,17 @@
+package ex03;
+
+public class Sample {
+
+	public static void main(String[] args) {
+		Report r=new Report();
+		r.setSno("01");
+		r.setSname("ȫ�浿");
+		r.setKor(50);
+		r.setEng(60);
+		r.setMat(80);
+		r.printReport();
+		r.printList();
+
+	}
+
+}

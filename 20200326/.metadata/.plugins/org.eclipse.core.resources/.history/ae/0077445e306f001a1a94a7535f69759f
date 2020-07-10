@@ -1,0 +1,106 @@
+package ex04;
+
+import java.util.Scanner;
+
+public class Sample {
+
+	public static void main(String[] args) {
+		Scanner s= new Scanner(System.in);
+		
+		boolean run=true;
+		
+		String[] account=new String[100]; // 계좌번호
+		String[] name=new String[100];	// 계좌주
+		int[] money=new int[100];	// 잔액
+		int count=0;
+		
+		
+		
+		
+		while(run) {
+			
+		System.out.println("------------------------------------------------");
+		System.out.println(" 1. 계좌생성 | 2. 계좌목록 | 3. 예금 | 4. 출금 | 5. 종료 ");
+		System.out.println("------------------------------------------------");
+		System.out.print("선택> ");
+
+		int menu=s.nextInt();
+		
+		switch(menu) {
+		
+			case 1: //계좌 생성
+				System.out.println("---------------------------------------------");
+				System.out.println("계좌생성");
+				System.out.println("---------------------------------------------");
+				System.out.print("계좌번호> ");
+				account[count]=s.next();
+				System.out.print("계좌주> ");
+				name[count]=s.next();
+				System.out.print("초기 입금액> ");
+				s.nextLine();
+				money[count]=s.nextInt();
+				count=count+1;
+				System.out.print("결과 : 계좌가 생성되었습니다.");
+				break;
+			case 2: // 계좌목록
+				System.out.println("-------------------------------------------");
+				System.out.println("계좌목록");
+				System.out.println("-------------------------------------------");
+				for(int i=0; i<count; i++ ) {
+					System.out.println(account[i] +"\t"+ name[i]+ "\t"+money[i]);
+					System.out.println();
+				}
+				break;
+			case 3: // 예금
+				System.out.println("-------------------------------------------");
+				System.out.println("예금");
+				System.out.println("-------------------------------------------");
+				System.out.print("계좌번호> ");
+				String acc=s.next();
+				
+				System.out.print("예금액> ");
+				int mo=s.nextInt();
+				
+				for(int i=0; i<count; i++) {
+					if(account[i].equals(acc)) {
+						money[i]=money[i]+mo;
+						System.out.println("결과 예금 성공");
+						System.out.println("잔액" + money[i]);
+					}
+				}
+			
+				 break;	
+			case 4: // 출금
+				System.out.println("-------------------------------------------");
+				System.out.println("출금");
+				System.out.println("-------------------------------------------");
+				System.out.print("계좌번호> ");
+				
+				account[count]=s.next();
+				System.out.print("예금액> ");
+				
+				String acc2=s.next();
+				int mo1=s.nextInt();
+				for(int i=0; i<count; i++) {
+					if(account[i].equals(acc2)) {
+						System.out.print("출금액");
+						
+						money[i]=money[i]-mo1;
+						System.out.println("결과 출금 성공");
+						  System.out.println("잔액 " + money[i]);
+					} 
+				}	
+				break;
+			case 5: // 종료
+				run=false;
+				System.out.println("프로그램 종료");
+				break;
+			default :
+				System.out.println("잘못된 메뉴입니다.");
+				
+		}
+		
+		}
+	}
+
+}

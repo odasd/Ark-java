@@ -1,0 +1,12 @@
+package ex04;
+
+public class Sample {
+
+	public static void main(String[] args) {
+		//배열(참조타입)
+		int[] d= {1, 2, 3}; //데이터를 원하는 대로 기입 가능
+		System.out.println("3번째 : " + d[2]);
+
+	}
+
+}

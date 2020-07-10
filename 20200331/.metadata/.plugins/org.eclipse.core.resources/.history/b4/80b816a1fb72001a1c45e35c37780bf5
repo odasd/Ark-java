@@ -1,0 +1,20 @@
+package ex02;
+
+//³ĞÀÌ
+public class Area {
+	//»ï°¢Çü ³ĞÀÌ
+	static double triangle(int x, int y) {
+		return (double)x * y / 2;
+	}
+	
+	
+	//Á÷»ç°¢Çü ³ĞÀÌ
+	static int rectangle(int x, int y) {
+		return x * y;
+	}
+	
+	//Á¤»ç°¢Çü ³ĞÀÌ
+	static int rectangle(int x) {
+		return x * x;
+	}
+}

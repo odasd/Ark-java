@@ -1,0 +1,36 @@
+package ex06;
+
+public class Sample {
+
+	public static void main(String[] args) {
+		String[] 상품명= {"수량", "단가", "금액"};
+		int[] kor = {90, 95, 70};
+		int[] eng = {90, 95, 70};
+		int[] mat = {90, 95, 77};
+		int[] tot = new int[3]; // 정수값 3칸을 만듬
+		double[] avg = new double[3]; // 실수값 3칸을 만듬
+		int sumKor=0;
+		int sumEng=0;
+		int sumMat=0;
+		int sumTot=0;
+		double sumAvg=0;
+		//데이터 입력
+		
+		System.out.println("상품명\t수량\t단가\t금액");
+		for(int i=0; i<=2; i++) {
+			tot[i]=kor[i]+eng[i]+mat[i];
+			avg[i]=tot[i]/3.;
+			System.out.println(상풍명[i]+"\t"+kor[i]+"\t"+eng[i]+"\t"+mat[i]+"\t"+tot[i]+"\t"+avg[i]);
+			sumKor=sumKor+kor[i];
+			sumEng=sumEng+eng[i];
+			sumMat=sumMat+mat[i];
+			sumTot=sumTot+tot[i];
+			sumAvg=sumAvg+avg[i]; // 여기서 /3해도됨ㅋㅋ
+		}
+		
+		System.out.println("------------------------------------------------------------------------");
+		System.out.println("국어평균\t" + sumKor/3+"\t"+"영어평균\t"+sumEng/3+"\t"+ "수학평균\t"+sumMat/3+"\t"+"전체평균"+sumTot/3 +"\t" +"전체평균"+ sumAvg/3);
+
+	}
+
+}

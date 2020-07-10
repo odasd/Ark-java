@@ -1,0 +1,22 @@
+package ex05;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+
+public class Sample {
+
+	public static void main(String[] args) throws Exception {
+		//单捞磐海捞胶 立加
+        String driver = "oracle.jdbc.driver.OracleDriver";
+        String url = "jdbc:oracle:thin:@localhost:1521:orcl";
+        String user = "system";
+        String password = "159752s";
+        Class.forName(driver);
+        Connection con = DriverManager.getConnection(url, user, password);
+        
+        
+        
+
+	}
+
+}

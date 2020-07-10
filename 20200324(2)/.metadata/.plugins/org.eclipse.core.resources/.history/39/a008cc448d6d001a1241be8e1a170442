@@ -1,0 +1,14 @@
+package ex05;
+
+public class Sample {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+	
+	public void switch1() {
+		System.out.println("sitch ¿¹Á¦1");
+	}
+	
+}

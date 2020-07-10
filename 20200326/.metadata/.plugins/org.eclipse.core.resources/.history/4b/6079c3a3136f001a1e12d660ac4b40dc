@@ -1,0 +1,47 @@
+package ex03;
+
+import java.util.Scanner;
+
+public class Sample {
+
+	public static void main(String[] args) {
+		Scanner s=new Scanner(System.in);
+		
+		boolean run=true;
+		
+		String[] no=new String[100]; 
+		String[] name=new String[100];
+		String[] address=new String[100];
+		int count=0; // 주소 입력 개수 == 입력될때마다 1씩증가
+			
+		while(run) {
+			
+			System.out.println("----------------------------------------------------");
+			System.out.println("1.번 주소입력 | 2.번 주소목록 | 3.번 주소 조회 | 4.번 프로그램종료");
+			System.out.println("----------------------------------------------------");
+			System.out.print("선택> ");
+			
+			int menu=s.nextInt();
+			
+			switch(menu) {
+				
+				case 1: // 주소입력
+					count=count+1;
+					System.out.println("-------------------------------------------");
+					System.out.println("주소입력> ");
+					break;
+				case 2:	// 주소목록
+					
+					break;
+				case 3: // 주소 조희
+					
+					break;
+				case 4: // 종료
+					System.out.println("프로그램 종료");
+					run=false;
+			}
+		}
+
+	}
+
+}

@@ -1,0 +1,16 @@
+package ex03;
+
+import java.util.Scanner;
+
+public class Sample {
+
+	public static void main(String[] args) {
+		Scanner s=new Scanner(System.in);
+		
+		System.out.println("--------------------------------------------------------");
+		System.out.println("1.번 주소입력 | 2.번 주소목록 | 3.번 주소 조회 | 4.번 프로그램종료");
+		System.out.println("--------------------------------------------------------");
+
+	}
+
+}

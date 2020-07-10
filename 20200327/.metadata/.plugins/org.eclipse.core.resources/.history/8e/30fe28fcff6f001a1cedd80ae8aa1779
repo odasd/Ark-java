@@ -1,0 +1,19 @@
+package ex04;
+
+public class Sample {
+
+	public static void main(String[] args) {
+		
+		
+		boolean run=true;
+		
+		
+		
+		while(run) {
+			System.out.println("1. 성적입력 | 2. 성적출력 | 3. 종료");
+			
+		}
+
+	}
+
+}

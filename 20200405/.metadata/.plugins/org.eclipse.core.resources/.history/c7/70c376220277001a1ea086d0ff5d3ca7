@@ -1,0 +1,6 @@
+package snippet;
+
+public class Snippet {
+	The local variable account may not have been initialized
+}
+

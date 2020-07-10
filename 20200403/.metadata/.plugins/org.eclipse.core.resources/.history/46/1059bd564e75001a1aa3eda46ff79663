@@ -1,0 +1,66 @@
+package ex01;
+
+import java.util.Scanner;
+
+public class Sample {
+
+	public static void main(String[] args)  {
+		
+		Scanner s=new Scanner(System.in);
+		
+		StudentDAO dao=new StudentDAO();
+		
+		System.out.println("-----------------------------------------");
+		System.out.println(" 1. 입력 | 2. 조회 | 3. 목록 | 4. 수정 | 5. 종료");
+		System.out.println("-----------------------------------------");
+		System.out.print("메뉴선택> ");
+		int menu=s.nextInt();
+		
+		switch(menu) {
+		
+			case 1:
+				System.out.println("------");
+				System.out.println("학생입력");
+				System.out.println("------");
+				StudentVO vo=new StudentVO();
+				System.out.println("학번(두자리입력)> ");
+				vo.setSno(s.next());
+				System.out.println("성명> ");
+				vo.setSname(s.next());
+				System.out.println("전화번호> ");
+				vo.setTel(s.next());
+				
+				try {
+					
+					dao.insert(vo);
+					
+				} catch(Exception e) {
+					
+				}
+				
+				
+				
+				
+				break;
+			case 2:
+				
+				break;
+			case 3:
+				
+				break;
+			case 4:
+				
+				break;
+			case 5:
+				System.out.println("프로그램 종료");
+				break;
+			default :
+				System.out.println("잘못된 입력입니다.");
+		
+		}
+		
+		
+
+	}
+
+}

@@ -1,0 +1,5 @@
+package ¿∏«„¿Ã;
+
+public class StudentVO {
+
+}

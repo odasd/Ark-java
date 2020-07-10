@@ -1,0 +1,21 @@
+package ex01;
+
+public class Sample {
+
+	public static void main(String[] args) { //3가지 기본성 : 메소드 필드 클래스
+		Student s1=new Student(); //기본 생성자 class에 생성자를 주지 않아도 기본으로 생성자로 된다
+		//클래스   객체
+		s1.sno="01"; //필드(속성)
+		s1.sname="홍길동";
+		s1.tel="010-5043-7887";
+		s1.print(s1);
+		
+		Student s2=new Student();
+		
+		s2.sno="02";
+		s2.sname="심청이";
+		s2.tel="010-1234-5678";
+		s2.print(s2);
+	}
+
+}
